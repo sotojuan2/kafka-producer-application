@@ -1,0 +1,27 @@
+{
+    "schemaType": "AVRO",
+    "schema": "{\"type\":\"record\",\"namespace\":\"org.matias\",\"name\":\"Message\",\"fields\":[{\"name\":\"greet\",\"type\":\"string\"}]}",
+    "metadata": {
+        "properties" : {
+            "owner": "Bob Jones",
+            "email": "bob@acme.com"
+        }
+    },
+    "ruleSet": { 
+        "domainRules": [
+          {
+            "name": "checkLen",
+            "kind": "CONDITION",
+            "type": "CEL",
+            "mode": "WRITE",
+            "expr": "size(message.greet) == 4",
+            "onFailure": "DLQ"
+          },
+          {
+            "name": "populateFullName",
+            "kind": "TRANSFORM",
+            "type": "CEL_FIELD",
+            "mode": "READ",
+            "expr": "name == 'greet' && value == 'talu' ? value+'  Hola'  : value"
+          }
+        ]}}

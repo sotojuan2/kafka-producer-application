@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Class-Path: kafka-avro-serializer-7.4.0.jar kafka-schema-rules-7.4.0.jar
+  slf4j-reload4j-2.0.7.jar kafka-schema-serializer-7.4.0.jar kafka-schem
+ a-registry-client-7.4.0.jar avro-1.11.0.jar commons-compress-1.21.jar g
+ uava-30.1.1-jre.jar logredactor-1.0.11.jar common-utils-7.4.0.jar JSONa
+ ta4Java-2.4.1.jar antlr4-runtime-4.11.1.jar cel-jackson-0.3.12.jar cel-
+ tools-0.3.12.jar slf4j-api-2.0.7.jar reload4j-1.2.22.jar jackson-annota
+ tions-2.14.2.jar jackson-dataformat-xml-2.14.2.jar jackson-databind-2.1
+ 4.2.jar jackson-core-2.14.2.jar snakeyaml-2.0.jar kafka-clients-7.4.0-c
+ cs.jar swagger-annotations-2.1.10.jar failureaccess-1.0.1.jar listenabl
+ efuture-9999.0-empty-to-avoid-conflict-with-guava.jar jsr305-3.0.2.jar 
+ checker-qual-3.8.0.jar error_prone_annotations-2.5.1.jar j2objc-annotat
+ ions-1.3.jar re2j-1.6.jar logredactor-metrics-1.0.11.jar minimal-json-0
+ .9.5.jar cel-core-0.3.12.jar woodstox-core-6.5.0.jar commons-text-1.10.
+ 0.jar gson-2.10.1.jar cel-generated-pb-0.3.12.jar stax2-api-4.2.1.jar c
+ ommons-lang3-3.12.0.jar protobuf-java-3.21.12.jar
+Main-Class: io.confluent.developer.KafkaAvroProducerApplication
+
