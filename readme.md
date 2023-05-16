@@ -1,6 +1,11 @@
 
 
 # Data Contracts
+Confluent Schema Registry adds support for tags, metadata, and rules, which together support the concept of a Data Contract. 
+## Set up environment
+```shell
+docker-compose up -d
+```
 ## Let's generate a schema with associated rules and metadata
 
 ````
@@ -93,5 +98,8 @@ docker exec -it kafka-producer-application-schema-registry-1 bash
 ``````
 kafka-avro-console-consumer --topic message --bootstrap-server kafka:29092 --property schema.registry.url=http://localhost:8081  --property rule.executors=populateFullName --property rule.executors.populateFullName.class=io.confluent.kafka.schemaregistry.rules.cel.CelFieldExecutor --from-beginning
 ``````
+# CP Data Contract
+
+[Data Contract Documentation](https://docs.confluent.io/platform/current/schema-registry/fundamentals/data-contracts.html)
 
 
